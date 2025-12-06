@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Place - Media</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .label {
+            font-size: 1.8em;
+            font-weight: 900;
+            text-decoration: none;
+            color: black;
+        }
+
+        .left, .right {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .left a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: 0.3s;
+            font-size: 16px;
+        }
+
+        .left a:hover {
+            color: #e67e22;
+        }
+
+        .log-in, .sign-up {
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            padding: 8px 25px;
+            transition: 0.3s;
+        }
+
+        .log-in {
+            background-color: rgba(239, 153, 54, 0.15);
+            color: rgb(45, 45, 45);
+        }
+
+        .log-in:hover {
+            background-color: #ffe0b2;
+            color: #B32400;
+            transform: scale(1.05);
+        }
+
+        .sign-up {
+            background-color: rgb(171, 32, 0);
+            color: white;
+            box-shadow: 0 4px 10px rgba(171, 32, 0, 0.3);
+        }
+
+        .sign-up:hover {
+            background-color: #d93d1a;
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(179, 36, 0, 0.4);
+        }
+
+        .intro-section {
+            background-color: #fdfbf7;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .main-page-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #222;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .sub-title {
+            font-size: 1.2rem;
+            color: #444;
+            font-weight: 600;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .pictures-section {
+            background-color: #f2efeb;
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .section-label {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-label::after {
+            content: '';
+            display: block;
+            width: 50%;
+            height: 4px;
+            background-color: #e67e22;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .slider-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 65rem;
+            margin: 0 auto;
+        }
+
+        .slider {
+            scrollbar-width: none;
+            display: flex;
+            aspect-ratio: 16/9;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-radius: 1rem;
+        }
+        
+        .slider::-webkit-scrollbar {
+            display: none;
+        }
+
+        .slider a {
+            flex: 1 0 100%;
+            scroll-snap-align: start;
+            scroll-margin-top: 150px; 
+            height: 100%; 
+        }
+
+        .slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block; 
+        }
+
+        .slider-nav {
+            display: flex;
+            column-gap: 1rem;
+            position: absolute;
+            bottom: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .slider-nav a {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.6);
+            transition: 0.3s;
+            backdrop-filter: blur(2px);
+        }
+
+        .slider-nav a:hover {
+            background-color: #fff;
+            transform: scale(1.2);
+        }
+
+        .videos-section {
+            background-color: #4a4545;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .videos-section .section-label {
+            color: #fff;
+        }
+
+        .videos-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .video-box {
+            flex: 1 1 45%; 
+            min-width: 350px;
+            aspect-ratio: 16/9;
+            background-color: #000;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid #555;
+        }
+        
+        .video-box video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .upload-section {
+            background-color: #c44e2e;
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .upload-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+
+        .upload-btn {
+            display: inline-block;
+            background-color: white;
+            color: #c44e2e;
+            font-size: 1.2rem;
+            font-weight: 800;
+            padding: 12px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .upload-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            background-color: #f0f0f0;
+        }
+       
+
+    </style>
+</head>
+
+<body>
+    
+    <div class="header">
+        <div class="left">
+            <a href="about.html">About Me</a>
+            <a href="contact.html">Contact</a>
+            <a href="media.html">Media</a>
+        </div>
+        <div class="center">
+            <a class="label" href="index.html">Pizza Place</a>
+        </div>
+        <div class="right">
+            <a href="login.html" class="log-in">Log in</a>
+            <a href="signup.html" class="sign-up">Sign Up</a>
+        </div>
+    </div>
+
+    <section class="intro-section">
+        <div class="main-page-title">Users Work !</div>
+        <div class="sub-title">Check the latest recipes and work of our talented users</div>
+    </section>
+
+    <section class="pictures-section">
+        <div class="section-label">Pictures Gallery</div>
+
+        <div class="slider-wrapper">
+            <div class="slider">
+                <a href="#s1-2"><img id="s1-1" src="html-data/pics/pizza1.jpg" alt="pizza1"></a>
+                <a href="#s1-3"><img id="s1-2" src="html-data/pics/pizza2.jpg" alt="pizza2"></a>
+                <a href="#s1-4"><img id="s1-3" src="html-data/pics/pizza3.jpg" alt="pizza3"></a>
+                <a href="#s1-5"><img id="s1-4" src="html-data/pics/pizza4.jpg" alt="pizza4"></a>
+                <a href="#s1-6"><img id="s1-5" src="html-data/pics/pizza5.jpg" alt="pizza5"></a>
+                <a href="#s1-7"><img id="s1-6" src="html-data/pics/pizza11.jpg" alt="pizza6"></a>
+                <a href="#s1-8"><img id="s1-7" src="html-data/pics/pizza12.jpg" alt="pizza7"></a>
+                <a href="#s1-9"><img id="s1-8" src="html-data/pics/pizza13.webp" alt="pizza8"></a>
+                <a href="#s1-1"><img id="s1-9" src="html-data/pics/pizza14.jpg" alt="pizza9"></a>
+            </div>
+            <div class="slider-nav">
+                <a href="#s1-1"></a>
+                <a href="#s1-2"></a>
+                <a href="#s1-3"></a>
+                <a href="#s1-4"></a>
+                <a href="#s1-5"></a>
+                <a href="#s1-6"></a>
+                <a href="#s1-7"></a>
+                <a href="#s1-8"></a>
+                <a href="#s1-9"></a>
+            </div>
+        </div>
+
+        <div class="slider-wrapper">
+            <div class="slider">
+                <a href="#s2-2"><img id="s2-1" src="html-data/pics/pizza6.jpg" alt="Slide 2 Image 1"></a>
+                <a href="#s2-3"><img id="s2-2" src="html-data/pics/pizza7.webp" alt="Slide 2 Image 2"></a>
+                <a href="#s2-4"><img id="s2-3" src="html-data/pics/pizza8.webp" alt="Slide 2 Image 3"></a>
+                <a href="#s2-5"><img id="s2-4" src="html-data/pics/pizza9.jpg" alt="Slide 2 Image 4"></a>
+                <a href="#s2-6"><img id="s2-5" src="html-data/pics/pizzza10.webp" alt="Slide 2 Image 5"></a>
+                <a href="#s2-7"><img id="s2-6" src="html-data/pics/pizza15.jpg" alt="Slide 2 Image 6"></a>
+                <a href="#s2-8"><img id="s2-7" src="html-data/pics/pizza16.jpg" alt="Slide 2 Image 7"></a>
+                <a href="#s2-9"><img id="s2-8" src="html-data/pics/pizza17.webp" alt="Slide 2 Image 8"></a>
+                <a href="#s2-1"><img id="s2-9" src="html-data/pics/pizza18.webp" alt="Slide 2 Image 9"></a>
+            </div>
+            <div class="slider-nav">
+                <a href="#s2-1"></a>
+                <a href="#s2-2"></a>
+                <a href="#s2-3"></a>
+                <a href="#s2-4"></a>
+                <a href="#s2-5"></a>
+                <a href="#s2-6"></a>
+                <a href="#s2-7"></a>
+                <a href="#s2-8"></a>
+                <a href="#s2-9"></a>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="videos-section">
+        <div class="section-label">Videos</div>
+        
+        <div class="videos-grid">
+            <div class="video-box">
+                <video controls>
+                    <source src="html-data/videos/video1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-box">
+                <video controls>
+                    <source src="html-data/videos/video2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-box">
+                <video controls>
+                    <source src="html-data/videos/video3.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-box">
+                <video controls>
+                    <source src="html-data/videos/video4.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <section class="upload-section">
+        <h2 class="upload-title">Post Your Work Now</h2>
+        <a href="signup.html" class="upload-btn">Upload</a>
+    </section><div>
+    <footer style="background: #000; color: #fff; text-align: center; padding: 20px 0;">
+        <p>Pizza Place. All Rights Reserved To Ahmed Ahmed and Ahmed Taha</p>
+    </footer>
+</div>
+
+
+</body>
+
+</html>
+

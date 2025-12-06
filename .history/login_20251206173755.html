@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <title>Pizza Place !</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins...&family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <style>
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .label {
+            font-size: 1.8em;
+            font-weight: 900;
+            text-decoration: none;
+            color: black;
+        }
+
+        .left, .right {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .left a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: 0.3s;
+            font-size: 16px;
+        }
+
+        .left a:hover {
+            color: #e67e22;
+        }
+
+        .log-in, .sign-up {
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            padding: 8px 25px;
+            transition: 0.3s;
+        }
+
+        .log-in {
+            background-color: rgba(239, 153, 54, 0.15);
+            color: rgb(45, 45, 45);
+        }
+
+        .log-in:hover {
+            background-color: #ffe0b2;
+            color: #B32400;
+            transform: scale(1.05);
+        }
+
+        .sign-up {
+            background-color: rgb(171, 32, 0);
+            color: white;
+            box-shadow: 0 4px 10px rgba(171, 32, 0, 0.3);
+        }
+
+        .sign-up:hover {
+            background-color: #d93d1a;
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(179, 36, 0, 0.4);
+        }
+        .log{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex: 1;
+            margin: 0;
+            gap: 220px;
+            width: 100%;
+            /* background-color: rgb(232, 212, 186); */
+
+        }
+        .steve-talking{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 150px;
+        }
+        .steve-talking h2{
+            margin-left: 60px;
+            font-size: 70px;
+            display: flex;
+            line-height: 1.2;
+            color:rgb(205, 96, 0);
+            text-align: left;
+            margin-top: 0;
+        }
+        .log img{
+            filter: drop-shadow(10px 10px 15px rgba(0,0,0,0.5));
+            margin-top: 50px;
+        }
+        .all{
+            background-image: url(html-data/pics/wallpaper.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 120vh; 
+            display: flex;
+            flex-direction: column; 
+        }
+        .data-in{
+            display: flex;
+            flex-direction: column;
+            border: 2px solid black;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            padding: 50px; 
+            flex-wrap: wrap;
+            width: 400px;
+            gap: 30px;
+            margin-top: 70px;
+        }   
+        .data-in h3{
+            margin-bottom: 10px;
+            font-size: 30px;
+        }
+        .data-in h2{
+            font-size: 40px;
+            line-height: 1.2;
+            color: rgb(205, 85, 0);
+        }
+        .email{
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        .password{
+            flex-direction: column;
+            display: flex;
+            gap: 2px;
+        }
+        .input{
+            width: 100%px;
+            height: 50px;
+            border-radius: 10px;
+            border: 2px;
+            padding: 0 15px;
+            outline: none;
+            font-size: 18px;
+        }
+        .footer {
+            background-color: rgb(11, 15, 20);
+            color: white;
+            padding: 20px;
+            margin-top: 50px;
+            width: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            border-radius: 5px 5px 0px 0px;
+        }
+        
+    </style>
+</head>
+<body class="all">
+    <div class="header">
+        <div class="left">
+            <a href="about.html">About Me</a>
+            <a href="contact.html">Contact</a>
+            <a href="media.html">Media</a>
+
+        </div>
+
+        <div class="center">
+            <a class="label" href="index.html">Pizza Place</a>
+        </div>
+
+        <div class="right">
+            <a href="login.html" class="log-in">Log in</a>
+            <a href="signup.html" class="sign-up">Sign Up</a>
+        </div>
+    </div>
+    </div>
+    <div class="log">
+        <div class="steve-talking">
+            <img class="stevelog" src="html-data/pics/pizza-log-removebg-preview.png" alt="log in">
+            <h2>Log in man</h2>
+        </div>
+        <div class="data-in">
+            <h2>Welcome Back Pizza Guy !</h2>
+            <div class="email">
+                <h3>Email</h3>
+                <input type="email" name="user_email" class="input" >
+            </div>
+            <div class="password">
+                <h3>password</h3>
+                <input type="password" name="password" class="input" >
+            </div>
+            <a href="login.html" class="log-in">Log in</a>
+        </div>
+         
+    </div>
+    <div class="footer">
+                <p>Pizza Place. All Rights Reserved To Ahmed Ahmed and Ahmed T.</p>
+            </div>
+    
+</body>
+
+</html>
+
