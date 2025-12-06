@@ -105,12 +105,20 @@
         }
         .all{
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: end;
             align-items:center; 
             gap: 30px;
             padding: 50px 0 75px 150px;
             
+        }
+        .ahmed-ahmed, .ahmed-taha{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 80px;
         }
         .all img{
             height: auto;
@@ -138,9 +146,7 @@
             font-size: 1rem;
             margin-top: 3px;
             margin-left: 4px;
-            margin-right: 4px;
-
-        }
+            margin-right: 4px;}
         .contact{
             display: flex;
             flex-direction: row;
@@ -216,8 +222,9 @@
         </div>
     </div>
     <div class="all">
-                
+            <div class="ahmed-ahmed">
             <div class="about">
+                <div class="text">
                 <h2>Who am I?</h2>
                 <p>My name is <b> Ahmed Ahmed Abd El-Rauf </b></p>
                 <p>I'm currently studying at <b>Level 1  </b>   <br></p>
@@ -230,15 +237,32 @@
                     <a href="https://www.linkedin.com/" target="_blank"><button><img class="linked" src="html-data/pics/linked.png" alt="linkedin"></button></a>
                     <a href="https://x.com/" target="_blank"><img class="x" src="html-data/pics/x.png" alt="linkedin"></a>
                 </div>
+                </div>
             </div>
             <div class="me">
                 <img src="html-data/pics/me.jpeg" alt="me">
             </div>
+            </div>
+            <div class="ahmed-taha">
+            <div class="about">
+                <div class="text">
+                <h2>Who am I?</h2>
+                <p>My name is <b> Ahmed Taha Elsayed </b></p>
+                <p>I'm currently studying at <b>Level 1  </b>   <br></p>
+                <p>in the Faculty of<b> Computers & Information </b>in Kafr El-Sheikh University<br></p>
+                <p>My ID is :<b>1618120250100233</b><br></p>
+                <p>you can contact me from below<br></p>
+                <div class="contact">
+                </div>
+                </div>
+            </div>
+            <div class="me">
+                <img src="html-data/pics/me2.jpg" alt="me2">
+            </div>
+            </div>
     </div>    
-    <div class="footer">
-                <p>Pizza Place. All Rights Reserved To Ahmed Ahmed.</p>
+    <div class="footer"><p>Pizza Place. All Rights Reserved To Ahmed Ahmed and Ahmed Taha.</p>
             </div>
 </body>
 
 </html>
-
