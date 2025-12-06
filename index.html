@@ -219,7 +219,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            width: 50%;
+            width: 55%;
         }
         .sec-3 h3{
             font-size: 70px;
@@ -246,9 +246,9 @@
             color: rgb(197, 52, 0);
             opacity: 0.7;
         }
-        .sec-3 button{
+        .post, .view{
             height: 80px;
-            width: 108%;
+            width: 100%;
             padding: 10px 30px;
             border-radius: 15px;
             border: none;
@@ -258,13 +258,21 @@
             cursor: pointer;
             font-family: 'Poppins', sans-serif;
             font-size: 30px;
-            margin-bottom: 150px;
             margin-top: 30px;
             box-shadow: 0 7px 14px rgba(255, 69, 0, 0.6);
             transition: 0.3s;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+           
             
         }
-        .sec-3 button:hover{
+        .view{
+        margin-bottom: 150px;
+        }
+        .sec-3 a:hover{
             background-color:rgb(217, 60, 2);
             transform: scale(1.05); 
         }
@@ -349,9 +357,10 @@
         </div>
         <div class="sec-3">
             <div class="text-box">
-                <h3>Post Your Blog<br> About Pizza<br> Now!</h3>
+                <h3>Post Your Favourite <br>Pizza Recipe <br> Now!</h3>
                 <textarea class="blog-input" placeholder="Write your pizza story here..."></textarea>
-                <button class="post">Post Now!</button>
+                <a href="signup.html" class="post">Post Now!</a>
+                <a href="media.html" class="view">View Our User's Recipes!</a>
             </div>
                 <img class="steve-write" src="html-data/pics/steve02.png" alt="steve write">
         </div>
