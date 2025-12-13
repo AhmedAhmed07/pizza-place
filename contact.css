@@ -17,7 +17,7 @@ body {
     max-width: 1519px;
     background-color: #fff;
     box-shadow: 0 0 30px rgba(0,0,0,0.2);
-    overflow: hidden;
+    /* overflow: hidden; */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
