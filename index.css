@@ -21,7 +21,7 @@ body {
     max-width: 1519px;
     background-color: rgb(235, 227, 217);
     box-shadow: 0 0 30px rgba(0,0,0,0.2);
-    overflow: hidden;
+    /* overflow: hidden; */
     display: flex;
     flex-direction: column;
 }
@@ -308,7 +308,6 @@ body {
         order: 2;
         width: 100%;
         text-align: center;
-        margin: 10px 0;
     }
 
     .right {
